@@ -28,7 +28,7 @@ In addition to combining the information about the legislators and their respect
 Once I had processed the data, I started to wonder how many votes the average bill received in each of these datasets. For each bill that was considered in each legislative body, I counted the number of affirmative votes (registered as 1s in the US data and 0s in the European data) and made histograms of these values, with the number of votes needed to pass the bill marked in red. 
 
 <table>
-  <tr><td></td><td></td><td></td></tr>
+  <tr><td><img src="https://raw.githubusercontent.com/drdeford/DATA115_PDP1/main/Figures/House_Hist.png"></td><td></td><td></td></tr>
    <tr><td>US Senate</td><td>US House</td><td>European Parliament</td></tr>
   </table>
 
