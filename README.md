@@ -32,11 +32,23 @@ Once I had processed the data, I started to wonder how many votes the average bi
    <tr><td>US Senate</td><td>US House</td><td>European Parliament</td></tr>
   </table>
 
+Perhaps unsurprisingly in the US data, many of the bills that actually get voted on are either fairly uncontroversial and very likely to pass or are split along nearly partisan lines and depend on the actions of a few individual representatives. The European Parliament shows a much broader range of voting behavior across the bills that it considers. 
 
 ## Analysis
 In order to see how much of the party structure could be recovered from the voting data, I used the Hamming distance to compute a dissimilarity matrix for each legislative body and then used MDS to project the data into two dimensions. I then made scatterplots of these embeddings with the nodes colored by the party assignment from the original data. Those figures are shown below and give clear evidence that this is a reliable technique for identifying political structure: 
 
+<table>
+  <tr><td><img src="https://raw.githubusercontent.com/drdeford/DATA115_PDP1/main/Figures/Senate_MDS.png"></td><td><img src="https://raw.githubusercontent.com/drdeford/DATA115_PDP1/main/Figures/House_MDS.png"></td><td><img src="https://raw.githubusercontent.com/drdeford/DATA115_PDP1/main/Figures/EP_MDS.png"></td></tr>
+   <tr><td>US Senate</td><td>US House</td><td>European Parliament</td></tr>
+  </table>
 
+In each case, the dimension reduction technique does place members from the same party close to each other and the clusters are mostly well-separated in the plane (the two representatives marked with green in the Senate data won their seats as independents but both did caucus with the Democratic party). For the European data, I made some additional plots to see what additional structure could be discerned. The left plot shows the same embedding with the legislators colored by the country that elected them, which does not appear to be captured by the MDS procedure. The center plot show a three dimensional projection of the voting data, which does seem to separate some of the parties a little better than the two dimensional version above. Finally, I used the dot product approach from the original paper to generate some networks from the underlying data, which do appear to show clustering by party, as expected. 
+
+<table>
+  <tr><td><img src="https://raw.githubusercontent.com/drdeford/DATA115_PDP1/main/Figures/EP_Country.png"></td><td><img src="https://raw.githubusercontent.com/drdeford/DATA115_PDP1/main/Figures/EP_3d.png"></td><td><img src="https://raw.githubusercontent.com/drdeford/DATA115_PDP1/main/Figures/EP_Networks.gif"></td></tr>
+   <tr><td>Country of Legislator</td><td>3d Party Scatterplot</td><td>Dot Product Networks</td></tr>
+  </table>
+  
 ## Descriptions of Code and Materials
 The raw data downloaded from the sources described above is contained in the `Raw_Data` folder, while the .csv files generated as a result of the processing procedures are contained in `Processed_Data`. There is one Jupyter notebook for each legislative body that does the processing and generates the relevant figures. 
 
