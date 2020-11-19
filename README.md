@@ -12,7 +12,16 @@ Some processing needed to be performed for both data sets. The main issue for th
 In addition to combining the information about the legislators and their respective votes, the vote codes differ significantly between the data sets. The recorded values in the 
 <table>
   <tr><td>Data Value</td><td>US Congress</td><td> Eurpoean Parliament</td></tr>
-  
+  <tr><td>0</td><td> 	Not a member at time of vote</td><td>For </td></tr>
+  <tr><td>1</td><td> 	Yea</td><td>Against</td></tr>
+  <tr><td>2</td><td> 	Paired Yea</td><td>Neutral</td></tr>
+  <tr><td>3</td><td> 	Announced Yea</td><td></td></tr>
+  <tr><td>4</td><td> 	Announced Nay</td><td></td></tr>
+  <tr><td>5</td><td> 	Paired Nay</td><td>Unaccounted</td></tr>
+  <tr><td>6</td><td> 	Nay</td><td>External</td></tr>
+  <tr><td>7</td><td> 	Present </td><td>Secret</td></tr>
+  <tr><td>8</td><td> 	Present </td><td></td></tr>
+  <tr><td>9</td><td> 	 Abstention </td><td></td></tr>
   </table>
 
 ## Visualizations
